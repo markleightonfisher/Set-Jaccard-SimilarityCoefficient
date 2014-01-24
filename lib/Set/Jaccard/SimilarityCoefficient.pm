@@ -98,20 +98,64 @@ $res = Set::Jaccard::SimilarityCoefficient::calc($a, $b);
 
 =head1 DESCRIPTION
 
+Set::Jaccard::SimilarityCoefficient lets you calculate the Jaccard Similarity
+Coefficient for either arrayrefs or Set::Scalar objects.
+
+Briefly, the Jaccard Similarity Coefficient is a simple measure of how similar
+2 sets are. The calculation is (in pseudo-code):
+
+=over 4
+
+    count(difference(SET-A, SET-B)) / count(union(SET-A, SET-B))
+
+=back
+
+There is a Jaccard Similarity Coefficient routine already in CPAN, but it is
+specialized for use by Text::NSP. I wanted a generic routine that could be
+used by anyone so Set::Jaccard::SimilarityCoefficient was born.
+
 =head1 SUBROUTINES/METHODS
+
+calc(A, B) calculates the Jaccard Similarity Coefficient for the arguments
+A and B. A and B can be either array references or Set::Scalar objects.
 
 =head1 DIAGNOSTICS
 
+new() will complain if A or B is empty, not either a reference to an array,
+or not a Set::Scalar object.
+
+calc() could theoretically throw DivideByZeroException when the union
+of the two sets has 0 members. However, that would require set A or
+set B to have 0 members, which was previously prohibited by the
+prohibition on empty sets.
+
 =head1 CONFIGURATION AND ENVIRONMENT
+
+This module should work wherever Perl works.
 
 =head1 DEPENDENCIES
 
+Set::Scalar
+
 =head1 INCOMPATIBILITIES
+
+None that I know of.
 
 =head1 BUGS AND LIMITATIONS
 
+There are no bugs that I know of. Given that this is non-trivial code,
+there will be bugs.
+
+The types of arguments are limited to either array references or
+Set::Scalar objects.
+
 =head1 AUTHOR
 
+Mark Leighton Fisher, <markleightonfisher@gmail.com>
+
 =head1 LICENSE AND COPYRIGHT
+
+Set::JaccardSimilarityCoefficient is licensed under the same terms
+as Perl itself.
 
 =cut
