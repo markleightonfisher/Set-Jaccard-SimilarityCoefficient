@@ -8,10 +8,10 @@ use Exception::Class qw(
   BadArgumentException
   DivideByZeroException
 );
-use Readonly qw( Scalar );
+use ReadonlyX;
 use Set::Scalar;
 
-our $VERSION = '1.5.2';
+our $VERSION = '1.6.0';
 
 ## no critic( Subroutines::ProhibitCallsToUnexportedSubs )
 # ------ Error messages
