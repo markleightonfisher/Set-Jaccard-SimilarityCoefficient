@@ -1,3 +1,19 @@
+v1.6.1  2018-03-06 12:35:26 EST  Mark Leighton Fisher
+
+  - Add t-kwalitee tests for Test::Kwalitee
+    (00test-kwalitee.t) and Test::Kwalitee::Extra
+    (01test-kwalitee-extra.t).
+  - Update Changes file to include v1.6.0.
+
+v1.6.0  2018-03-06 12:19:49 EST  Mark Leighton Fisher
+
+  - Added prereqs Exception::Class, Set::Scalar, and
+    Test::Most.
+  - Fixed to use (and require) ReadonlyX instead of the
+    increasingly hard-to-fix Readonly.
+  - Fixed metadata for author email, copyright year, and
+    and $VERSION.
+
 v1.5.2  2014-02-09 11:43:55 EST  Mark Leighton Fisher
 
   - Fixed to require Perl 5.12.0 so Test::More can be used

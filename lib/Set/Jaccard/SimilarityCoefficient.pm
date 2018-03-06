@@ -11,7 +11,7 @@ use Exception::Class qw(
 use ReadonlyX;
 use Set::Scalar;
 
-our $VERSION = '1.6.0';
+our $VERSION = '1.6.1';
 
 ## no critic( Subroutines::ProhibitCallsToUnexportedSubs )
 # ------ Error messages
